@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-let postSchema = new Schema({
-    title: {
+let commentSchema = new Schema({
+    name: {
         type: String,
         required : "Le titre est requis"
     },
-    content: {
+    message: {
         type: String,
         required : "Le contenu est requis"
     },
@@ -17,4 +17,4 @@ let postSchema = new Schema({
 })
 
 
-module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('Comment', commentSchema);

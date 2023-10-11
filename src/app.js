@@ -13,14 +13,14 @@ mongoose.connect('mongodb://127.0.0.1:27017/apinode')
 // mongoose.connect('mongodb://mongo/apinode')
 
 
-//app.use(express.urlencoded({ extended: true }))
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
+//app.use(express.urlencoded());
 app.use(express.json());
 
 const postRoute = require('./routes/postRoute');
 app.use('/posts', postRoute);
 
-const commentRoute = require('./routes/commentRoute');
-app.use('/comments', commentRoute);
+//const commentRoute = require('./routes/commentRoute');
+//app.use('/comments', commentRoute);
 
 app.listen(port,host);
